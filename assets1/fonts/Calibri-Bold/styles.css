@@ -1,0 +1,8 @@
+
+@font-face {
+	font-family: 'Calibri-Bold';
+	src: url('Calibri-Bold.eot?') format('eot'), 
+	     url('Calibri-Bold.woff') format('woff'), 
+	     url('Calibri-Bold.ttf')  format('truetype'),
+	     url('Calibri-Bold.svg#Calibri-Bold') format('svg');
+}
