@@ -3,16 +3,19 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel='shortcut icon' href='assets/img/favi.ico' type='image/x-icon'/ >
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Papercrunch - landing page</title>
+  <title>Papercrunch</title>
 
   <!-- Bootstrap -->
   <link href="assets1/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets1/css/main.css">
   <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="assets1/fonts/Calibri-Bold/styles.css">
   <link rel="stylesheet" href="assets1/fonts/BerlinSansFB-Reg/styles.css">
+  <!-- <link rel="stylesheet" href="assets1/css/jpreloader.css"> -->
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -21,242 +24,113 @@
     <![endif]-->
 </head>
 
-<body>
-  <style type="text/css">
-  section#front-page {
-    background-color: #02cbc0;
-  }
-  #front-page-image {
-    display: block;
-    margin: auto;
-    width: 740px;
-    position: absolute;
-    top: 0px;
-    height: auto;
-    bottom: 40%;
-    left: 0px;
-    right: 0px;
-    background-image: url('assets1/img/front-page.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-  }
-  .logo {
-    display: block;
-    margin: auto;
-    width: 512px;
-    position: absolute;
-    top: 46%;
-    height: 120px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background-image: url('assets1/img/logo.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-  }
-  .btn-notify {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    border: 4px solid #02CBC0;
-    color: #02CBC0;
-    background-color: #FFF;
-    margin-top: 12px;
-    margin-right: 10px;
-    font-family: "BerlinSansFB-Reg";
-    font-size: 20px;
-  }
-  .btn-notify:hover{
-    border: 4px solid #B7B0B0;
-    color: #B7B0B0;
-  }
-  #notify-form {
-    position: absolute;
-    bottom: -42px;
-    left: 0px;
-    right: 0px;
-    margin: auto;
-    width: 100%;
-    max-width: 400px;
-    height: 90px;
-  }
-  #notify-form input[type="text"] {
-    padding: 24px 10px 12px 16px;
-    border-radius: 2px;
-    height: auto;
-    font-family: "BerlinSansFB-Reg";
-    font-size: 21px;
-    color: #B7B0B0;
-    box-shadow: none !important;
-    outline: 0 !important;
-    border-color: transparent !important;
-  }
-  section#content {
-    background-color: #05aa9e;
-    overflow: hidden;
-  }
-  #content .wrapper h2 {
-    text-align: center;
-    font-family: 'Calibri-Bold';
-    font-size: 35px;
-  }
-  #content .wrapper {
-    padding-top: 10%;
-  }
-  #content p {
-    font-family: 'raleway';
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    line-height: 40px;
-    letter-spacing: 1px;
-    font-weight: 300;
-  }
-  #content h2 {
-    font-weight: bold;
-    color: white;
-    font-family: sans-serif;
-    margin-bottom: 25px;
-  }
-  section#signup {
-    position: relative;
-  }
-  #signup .mac-book {
-    background-image: url(assets1/img/mac.png);
-    width: 400px;
-    height: 237px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin: auto;
-    margin-top: 15%;
-  }
-  .big-text {
-    color: #b3b3b3;
-    font-family: 'Calibri-Bold';
-    font-weight: bold;
-    font-size: 50px;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 100px;
-  }
-  footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-  footer h5 {
-    color: #cccccc;
-    font-family: 'BerlinSansFB-Reg';
-    text-align: center;
-    margin-top: 100px;
-    font-size: 18px;
-  }
-  footer img {
-    width: 13px;
-    vertical-align: baseline;
-  }
-  footer h5 a{
-    color: #cccccc;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-  }
-  footer h5 a:hover{
-    color: #05aa9e;
-    text-decoration: none;
-  }
-  #successMessage{
-    display: none;
-    text-align: center;
-    font-family: 'raleway',sans-serif;
-    color: white;
-    font-weight: bold;
-    line-height: 33px;
-  }
-  .error{
-    display: none;
-    position: absolute;
-    color: white;
-    text-align: center;
-  }
-  @media only screen and (max-width: 800px){
-    #front-page-image{
-      /*max-width: 640px;*/
-      width: 90%;
-
-    }
-    #content .wrapper h2{
-      font-size: 30px;
-    }
-    #content .wrapper p{
-      font-size: 18px;
-      line-height: 36px;
-    }
-  }
-  @media only screen and (max-width: 540px){
-    .logo{
-      width: 85%;
-    }
-    #front-page-image{
-      background-image: url(assets1/img/paper.png);
-      width: 200px;
-      top: 100px;
-    }
-    .big-text{
-      font-size: 40px;
-      padding: 0px 10px;
-      line-height: 40px;
-    }
-    #content .wrapper p {
-      font-size: 16px;
-      line-height: 32px;
-    }
-    #notify-form {
-      padding: 10px;
-    }
-    .btn-notify{
-      right: 5px;
-      top: 12px;
-    }
-    #signup .mac-book {
-      width: 100%;
-      height: 160px;
-    }
-  }
-  @media only screen and (max-width: 340px){
-
-  }
-  </style>
+<body class="hide-slider">
+  <div class="loader-backdrop">
+    <div class="ball-bounce">
+      <img class="backdrop-logo" src="assets1/img/papercrunch-text.gif" alt="logo">
+      <div class="ball"></div>
+      <span class="shadow"></span>
+    </div>
+  </div>
   <section id="front-page">
-    <!-- <img id="front-page-image" src="assets1/img/front-page.png" alt="ui"> -->
-    <div id="front-page-image"></div>
-    <div class="logo"></div>
     <form id="notify-form">
-
       <input id="email" type="text" class="form-control" placeholder="Notify Me!">
-      <input type="submit" class="btn btn-notify" value="Send">
+      <div class="btn-cover">
+        <div id="btn-submit" class="btn-cut">
+          Send
+        </div>
+      </div>
       <div class="error"></div>
-      <h1 id="successMessage" >Thank you! <br/>We'll notify you soon!</h1>
     </form>
-    
+
+    <!-- <div id="front-page-image"></div> -->
+    <img src="assets1/img/front-page.png" alt="" id="front-page-image" class="hidden-xs">
+    <img src="assets1/img/paper.svg" alt="" id="front-paper" class="visible-xs">
+    <img src="assets1/img/logo.png" alt="" class="logo">
+    <!-- <div class="logo"></div> -->
+
+    <div class="successMessage" >
+      <p>
+        We'll be in touch! We will email you as soon as papercrunch is publicly available, <span class="userEmail" ></span>!<br/>In the meantime, stay tuned  <a target="_blank" href="https://twitter.com/papercrunchapp">@papercrunch</a>
+      </p> 
+    </div>
 
     <div class="clearfix"></div>
   </section>
   <section id="content">
+
     <div class="container wrapper">
       <h2>Papercrunch - Breeze through your Semester exams</h2>
       <p>
-        Ever tired of the worrying thoughts of being exhaustively prepared for your semester exams… Just when do you stop revising?? Just how far do you go collecting questions papers?? The search stops right with the launch of Papercrunch. A hub for all your question papers. Helps you catch hold of the past question papers without any conditions applied. It’s a free sign up, after which you can Search for question papers, Invite your friends,Ask questions, voting, commenting & manage personal user profiles.
+        Ever tired of gathering your question papers last minute before the exams?
+        Xeroxing them from your friends
+        Making those repeated trips to the college library
+        Just how far do you go to collect those question papers?
+        <strong>Introducing Papercrunch</strong>
+        Helps you access all your papers across any device and any platform when u need it the most! 
+        Just log in to papercrunch and it prepares your own personalised repository customized to your branch, semester and the subjects you chose. And there is more!!!
+        Ask questions, receive answers not just from your close loop of friends but from the entire papercrunch community all in real time.
+        Get recommendations to follow fellow students based on similarities of branch and subjects, create groups collaborate study together, help contribute and support to the ever growing platform and earn rewards in return.
       </p>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <div class="">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div id="cross-platform" class="feature-block">
+          </div>
+          <p>All your papers across any device and any platform at all times.</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div id="repository" class="feature-block">
+          </div>
+          <p>Personalised repository  tailor made to suit just you</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div id="conversation" class="feature-block">
+          </div>
+          <p>Join the conversation in realtime</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div id="group" class="feature-block">
+          </div>
+          <p>Create groups, collaborate and study together</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div id="community" class="feature-block">
+          </div>
+          <p>Contribute to the Papercrunch community and earn rewards</p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div id="many-more" class="feature-block">
+          </div>
+          <p>Many more exciting features comming soon.</p>
+        </div>
+      </div>
     </div>
   </section>
   <section id="signup">
     <div class="container">
       <div class="mac-book"></div>
+      <style type="text/css">
+
+      </style>
+      <form id="notify-form-2">
+        <input id="email2" type="text" class="form-control" placeholder="Notify Me!">
+        <input id="btn-submit-2" class="btn btn-danger" type="submit" name='submit' value="Sign up">
+        <div class="clearfix"></div>
+        <div class="error2"></div>
+      </form>
+
+      <div class="successMessage" >
+        <p>
+          We'll be in touch! We will email you as soon as papercrunch is publicly available, <span id="userEmail" ></span>!<br/>In the meantime, stay tuned  <a target="_blank" href="https://twitter.com/papercrunchapp">@papercrunch</a>
+        </p> 
+      </div>
+
+      <div class="clearfix"></div>
       <div class="big-text">Sign up and we'll send you an
         <br class="hidden-xs"/>invite when we're ready</div>
     </div>
@@ -267,16 +141,40 @@
   </section>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- // <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+  <script src="assets1/js/jquery-1.11.0.min.js" ></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="assets1/bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets1/js/main.js"></script>
-
+  <script type="text/javascript" src="assets1/js/jpreloader.js"></script>
   <script type="text/javascript">
+  
+
   $(document).ready(function() {
-    $("#notify-form").submit(function(event) {
-      event.preventDefault;
-      var email = $("#email").val();
+    $('body').jpreLoader({
+     "autoClose" : true,
+     "showPercentage" : false
+    });
+
+    // setTimeout(function(){
+    //   $('.loader-backdrop').fadeOut("slow");
+    //   setTimeout(function(){
+    //     $('body').removeClass("hide-slider");
+    //   },100);
+    // },4400);
+  });
+
+
+  $(document).ready(function() {
+    function errorPrint(message,id){
+      $(id).text(message).show();
+      setTimeout(function(){
+        $(id).fadeOut('fast');
+      },2000);
+    }
+
+    function sentMail(){
+      var email = $("#email").val();      
       if(validateEmail(email)){
         $.ajax({
           type: "POST",
@@ -284,26 +182,77 @@
           data: {
             email: email
           },
+          dataType : "json",
           success: function(data) {
-            console.log(data);
-            $("#email").hide();
-            $("#successMessage").show();
-            $("#notify-form .btn-notify").hide();
+            console.log(data["message"]);
+            if(data == 1){
+              $("div.successMessage").show();
+              $("#notify-form").hide();
+              $(".userEmail").html($("#email").val());
+
+              $("div.successMessage").show();
+              $("#notify-form-2").hide();
+              $(".userEmail").html($("#email2").val());
+            }
           }
         });
       } else if(email == ""){
-        $(".error").text("Please enter your email id.").show();
-        setTimeout(function(){
-          $(".error").fadeOut('fast');
-        },2000);
+        errorPrint("Please enter your email id.",".error");
       } else {
-        $(".error").text("invalid email id. Please make sure you type correctly.").show();
-        setTimeout(function(){
-          $(".error").fadeOut('fast');
-        },2000);
+        errorPrint("invalid email id. Please make sure you type correctly.",".error");
       }
+    }
 
-      // alert('helo');
+    function sentMail2(){
+      var email = $("#email2").val();      
+      if(validateEmail(email)){
+        $.ajax({
+          type: "POST",
+          url: "subfFormSubmit.php",
+          data: {
+            email: email
+          },
+          dataType : "json",
+          success: function(data) {
+            console.log(data["message"]);
+            if(data["message"] == 'email Exist'){
+              errorPrint("Your email already exits.",".error2");
+            } else {
+              $("div.successMessage").show();
+              $("#notify-form").hide();
+              $(".userEmail").html($("#email").val());
+
+              $("div.successMessage").show();
+              $("#notify-form-2").hide();
+              $(".userEmail").html($("#email2").val());
+            }
+          }
+        });
+      } else if(email == ""){
+        errorPrint("Please enter your email id.",".error2");
+      } else {
+        errorPrint("invalid email id. Please make sure you type correctly.",".error2");
+      }
+    }
+    $("#btn-submit").click(function(event) {
+      event.preventDefault;
+      sentMail();
+      return false;
+    });
+    $("#btn-submit-2").click(function(event) {
+      event.preventDefault;
+      sentMail2();
+      return false;
+    });
+
+    $("#notify-form").submit(function(event){
+      event.preventDefault;
+      sentMail();
+      return false;
+    });
+    $("#notify-form-2").submit(function(event){
+      event.preventDefault;
+      sentMail2();
       return false;
     });
   });
